@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jquery.shorten.js - Example</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/jquery.shorturl.min.js"></script>
+</head>
+<body>
+
+	<input type="text" id="input-url" placeholder="Insert an URL..."> <br/>
+	
+	<a href="javascript:fnShorten();" class="btn-submit"> Shorten it! </a> <br/>
+	
+	<input id="output-url" disabled></input>
+
+	<script type="text/javascript">
+		var out = $('#output-url');
+		function fnShorten() {
+			$.shorturl({
+					url : $('#input-url').val()
+					, callback : function(res) {
+						out.text(res.id);
+				}
+			});
+		}
+	</script>
+</body>
+</html>
