@@ -9,11 +9,11 @@
 </head>
 <body>
 
-	<input type="text" id="input-url" placeholder="Insert an URL..."> <br/>
+	<input type="text" id="input-url" placeholder="Insert a URL..."> <br/>
 	
 	<a href="javascript:fnShorten();" class="btn-submit"> Shorten it! </a> <br/>
 	
-	<input id="output-url" disabled></input>
+	<input id="output-url" placeholder="Output..." disabled></input>
 
 	<script type="text/javascript">
 		var out = $('#output-url');
@@ -21,7 +21,7 @@
 			$.shorturl({
 					url : $('#input-url').val()
 					, callback : function(res) {
-						out.text(res.id);
+						out.val(res.id);
 				}
 			});
 		}
