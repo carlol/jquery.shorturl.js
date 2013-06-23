@@ -4,6 +4,11 @@ jquery.shorturl.js
 A jQuery plugin that allows you to shorten URLs using different services.
 
 
+**[GitHub project](https://github.com/carlol/jquery.shorturl.js)**
+
+
+----------
+
 At present, the plugin allows access only to goo.gl API. Additional features will ensure support for more services.
 
 **@see** a simple example: [**link**][1]
